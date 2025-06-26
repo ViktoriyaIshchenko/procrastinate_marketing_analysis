@@ -1,54 +1,61 @@
-# Real Estate Listings Analysis (Yandex.RealEstate)
+# Marketing Metrics Analysis for Procrastinate Pro+ App
 
 ## Project Description  
-This project analyzes historical apartment listing data from Yandex.RealEstate. The goal is to determine the market value of real estate properties and identify the key factors influencing pricing. Based on the findings, we aim to define parameters for building an automated system that detects pricing anomalies and potential fraudulent activities.  
-
-The dataset includes both user-input features and system-generated data, such as distances to parks, airports, and the city center.  
+Despite significant advertising investment, the Procrastinate Pro+ entertainment app has been experiencing financial losses over the past few months. This project aims to uncover the reasons behind the negative trends and help the company move towards profitability through a comprehensive analysis of user behavior, acquisition channels, and return on marketing investment.
 
 ## Objectives  
-1. Learn to estimate the market price of residential real estate.  
-2. Identify the main factors that influence apartment pricing.  
-3. Define parameters for an anomaly detection system to combat fraud.  
+The analysis seeks to answer the following questions:
+- Where do users come from, and what devices do they use?
+- How much does it cost to acquire users from different marketing channels?
+- How much revenue does each customer generate?
+- When do customer acquisition costs break even?
+- What factors hinder effective customer acquisition?
 
 ## Dataset Description  
-The dataset includes various characteristics of apartments listed for sale:
+The data spans from May 1 to October 27, 2019, and includes:
 
-- `airports_nearest` — distance to the nearest airport (in meters)  
-- `balcony` — number of balconies  
-- `ceiling_height` — ceiling height (in meters)  
-- `cityCenters_nearest` — distance to the city center (in meters)  
-- `days_exposition` — number of days the listing was active  
-- `first_day_exposition` — publication date  
-- `floor` — floor number  
-- `floors_total` — total number of floors in the building  
-- `is_apartment` — whether the listing is an apartment (boolean)  
-- `kitchen_area` — kitchen area (m²)  
-- `last_price` — listing price at removal  
-- `living_area` — living area (m²)  
-- `locality_name` — name of the locality  
-- `open_plan` — open floor plan (boolean)  
-- `parks_around3000` — number of parks within 3 km  
-- `parks_nearest` — distance to the nearest park (in meters)  
-- `ponds_around3000` — number of water bodies within 3 km  
-- `ponds_nearest` — distance to the nearest water body (in meters)  
-- `rooms` — number of rooms  
-- `studio` — whether the apartment is a studio (boolean)  
-- `total_area` — total area (m²)  
-- `total_images` — number of photos in the listing  
+- **User session logs**  
+  File: `visits_info_short.csv`  
+  - `User Id`: Unique user ID  
+  - `Region`: User's country  
+  - `Device`: User device type  
+  - `Channel`: Source of traffic  
+  - `Session Start`: Session start datetime  
+  - `Session End`: Session end datetime  
+
+- **Purchase records**  
+  File: `orders_info_short.csv`  
+  - `User Id`: Unique user ID  
+  - `Event Dt`: Purchase datetime  
+  - `Revenue`: Order amount  
+
+- **Advertising costs**  
+  File: `costs_info_short.csv`  
+  - `dt`: Date of advertising campaign  
+  - `Channel`: Advertising source  
+  - `costs`: Expenses for the campaign  
 
 ## Project Workflow  
-The research includes the following stages:  
-
 1. **Data Overview**  
-2. **Data Preprocessing**  
-3. **Feature Engineering**  
-4. **Exploratory Data Analysis**  
-5. **Conclusions and Recommendations**  
+2. **Data Cleaning & Preprocessing**  
+3. **Exploratory Data Analysis**  
+4. **Marketing Metric Calculation**  
+   - Customer Acquisition Cost (CAC)  
+   - Revenue per User  
+   - Return on Investment (ROI)  
+   - Payback Period  
+5. **Insights and Recommendations**
 
 ## Tools & Technologies  
-- **Python**  
-- **pandas**  
-- **matplotlib**, **seaborn**  
+- Python  
+- pandas  
+- matplotlib, seaborn  
+- datetime, numpy  
+
+## Key Outcomes  
+- Identification of the most cost-effective advertising channels  
+- Evaluation of user behavior across devices and countries  
+- Insights into profitability and customer lifetime value (LTV)
 
 ## Author  
-This project was completed as part of a data analysis training program.  
+This project was developed as part of a Data Science educational program.
